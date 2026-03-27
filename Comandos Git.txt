@@ -79,3 +79,6 @@ COMANDOS:
 >> ANÁLISES E INSPEÇÃO
 
 -> GIT SHOW <nome_da_tag>: Usado para verificar uma tag.
+-> GIT DIFF: Para exibir as diferenças de um branch.
+-> GIT DIFF <arquivo><arquivo_b>: Verificar as diferenças entre arquivos.
+-> GIT SHORTLOG: Log resumido do projeto.
