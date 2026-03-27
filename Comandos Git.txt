@@ -1,0 +1,81 @@
+# CURSO GIT E GITHUB - HORA DE CODAR
+
+COMANDOS:
+
+-> GIT STATUS: Usado para verificar o estado atual do repositório Git,
+				mostrando quais arquivos foram modificados, quais estão prontos para serem comitados,
+				e quais não estão sendo rastreados.
+				
+-> GIT ADD . : Comando usado para preparar todos os arquivos que foram alterados.
+
+-> GIT ADD <nome_do_arquivo>: Comando usado para preparar 
+													somente o arquivo que foi alterado.
+													
+-> GIT COMMIT -a -m "<mensagem>": "-a"  Mesmo se os arquivos modificados não estiverem no stage (git add),
+									    serão atualizados no diretório local e serão enviados no git push origin main.
+										
+-> GIT COMMIT -m "<mensagem>": Só será atualizado e enviado os arquivos que foram preparados (git add).
+
+-> GIT PULL: Atualizar meu repositório local com as novas versões atualizadas no GitHub.
+
+-> GIT CLONE: Baixar o repositório do GitHub, quando não possuímos o projeto na maquina local.
+
+-> CLS (VSCODE): Limpar o terminal.
+
+-> GIT CLONE <url> . : Clona o repositório do GitHub. Com o "." depois da url, o repositório é baixado na pasta raiz.
+
+-> GIT RM <nome_do_arquivo>: Deleta o arquivo do projeto.
+
+-> GIT LOG: Histórico das alterações.
+
+-> GIT MV <nome_do_arquivo> <destino_do_arquivo + nome_do_arquivo>: Mover arquivos de local e alterar o nome do arquivo.
+
+-> GIT CHECKOUT: Retorna a alteração do arquivo.
+
+-> GIT RESET --hard origin/main: Todas as ações commitadas e também as pendentes serão excluídas.
+
+-> GIT REMOTE RM ORIGIN: Para remover url do repositório.
+
+-> GIT REMOTE ADD ORIGIN <url_repo>: Para adicionar o repositório ao projeto local.
+
+>>> BRANCH <<<
+
+- Branch é a forma que o Git separa as versões dos projetos;
+- Quando um projeto é criado ele inicia na branch MAIN;
+- Geralmente cada nova feature de um projeto fica em um branch separado;
+- Após a finalização das alterações os branchs são unidos para ter um código-fonte final;
+
+->> COMANDOS <<-
+
+>>> Branchs são ramificações do projeto principal
+-> GIT BRANCH: Para visualizar os branchs disponíveis.
+-> GIT BRANCH <nome_do_branch>: Coamando usado para criar um novo branch.
+-> GIT BRANCH -d or --delete <nome_do_branch>: Usado para deletar um branch.
+-> GIT CHECKOUT or SWITCH <nome_do_branch>: Usado para mudar de branch.
+	OBS: Sempre deve commitar as alterações antes de trocar de branchs para que a alteração não vá para a outra branch.
+-> GIT CHECKOUT -b <nome_do_branch>: Usado para mudar e criar um novo branch.
+-> GIT MERGE <nome_do_branch>: Usado para unir dois branches.
+-> GIT STASH: Usado para eliminar tudo que foi feito a partir do ponto em que iniciou as alterações, fora do commit.
+-> GIT STASH LIST: Usado para mostrar os Stashs criadas.
+-> GIT STASH APPLY <numero_da_stash>: Usado para recuperar tudo da stash.
+-> GIT STASH CLEAR: Usado para eliminar todas as stashes criadas.
+-> GIT STASH DROP <numero_da_stash>: Remover somente a stash escolhida.
+-> GIT TAG -a <nome_da_tag> -m "<mensagem>": Usado para marcar pontos específicos na história de um repositório Git.
+												Geralmente para releases de versões.
+-> GIT SHOW <nome_da_tag>: Usado para verificar uma tag.
+-> GIT CHECKOUT <nome_da_tag>: Usado para trocar de tag.
+-> GIT PUSH ORIGIN <nome_da_tag>: Usado para enviar a tag para o repositório.
+-> GIT PUSH ORIGIN --TAGS: Usado para enviar mais tags.
+-> GIT FETCH: baixa objetos, referências e metadados de um repositório remoto para o repositório local, atualizando as 
+              branches de rastreamento remoto (ex: origin/main) sem modificar o seu código de trabalho atual. É uma operação 
+			  segura, ideal para revisar mudanças antes de realizar o merge.
+
+>> SUBMÓDULOS
+			  
+-> GIT SUBMODULE: Comando para verificar os submódulos criados.
+-> GIT SUBMODULE ADD <url_repo>: Comando para adicionar um submódulo.
+-> GIT PUSH --RECURSE-SUBMODULES=ON-DEMAND: Comando para enviar alterações para o repositório submódulo.
+
+>> ANÁLISES E INSPEÇÃO
+
+-> GIT SHOW <nome_da_tag>: Usado para verificar uma tag.
