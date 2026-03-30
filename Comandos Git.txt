@@ -26,7 +26,7 @@ COMANDOS:
 
 -> GIT RM <nome_do_arquivo>: Deleta o arquivo do projeto.
 
--> GIT LOG: Histórico das alterações.
+-> GIT LOG: Histórico das alterações (Armazena apenas os commits de um branch).
 
 -> GIT MV <nome_do_arquivo> <destino_do_arquivo + nome_do_arquivo>: Mover arquivos de local e alterar o nome do arquivo.
 
@@ -82,3 +82,36 @@ COMANDOS:
 -> GIT DIFF: Para exibir as diferenças de um branch.
 -> GIT DIFF <arquivo><arquivo_b>: Verificar as diferenças entre arquivos.
 -> GIT SHORTLOG: Log resumido do projeto.
+
+>> Análise e Inspeção de Repositório
+
+-- LIMPANDO ARQUIVOS UNTRACKED --
+-> GIT CLEAN: Verifica e limpa arquivos que não estão sendo trackeados. (Todos que não utilizou git add).
+
+-- OTIMIZANDO O REPOSITÓRIO --
+-> GIT GC: Identifica arquivos que não são mais necessários e os exclui. (Otimiza o repositório em questão de performance).
+
+-- CHECAR INTEGRIDADE DOS ARQUIVOS --
+-> GIT FSCK: Verifica a integridade de arquivos e sua conectividade.
+
+-- REFLOG --
+-> GIT REFLOG: Vai mapear todos os seus passos no repositório. (Até uma mudança de branch é inserida nesse log).
+
+-- TRANSFORMANDO O REPO PARA ARQUIVO --
+-> GIT ARCHIVE --format zip --output master_files.zip master: Para transformar o repo em um arquivo compactado. (A Main vai estar zipada no arquivo main_files.zip).
+
+>> A IMPORTÂNCIA DO COMMIT <<
+
+ ° O problema: Commits sem sentido atrapalham o projeto;
+ ° Precisamos padronizar os commits para que o projeto cresça de forma saudável também no versionamento, isso ajuda em:
+	- Review do Pull Request;
+	- Melhoria dos logs em git log;
+	- Manutenção do Projeto (Voltar código, por exemplo);
+	
+>> BRANCHS COM COMMITS RUINS <<
+
+ ° Há uma solução chamada "private branches"
+ ° Onde criamos branches que não serão compartilhados no repositório, então podemos colocar qualquer commit;
+ ° Ao fim da solução do problema podemos fazer um rebase;
+ ° O comando será: GIT REBASE <branch_atual><funcionalidade> -i
+ ° Escolhemos os branches para excluir (squash) e renomear com (reword);
